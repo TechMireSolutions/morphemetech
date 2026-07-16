@@ -1,0 +1,415 @@
+/*
+ * Morpheme Tech Careers Page CSS
+ * Inspired by your existing style.css
+ */
+
+/* ========================================================== */
+/* Font Family and General Styling */
+/* ========================================================== */
+body {
+    /* Use the same background and font as your main site */
+    background-color: #000000;
+    font-family: 'Fedra', Arial, sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.careers-page-content,
+.job-details-page-content,
+.application-form-content {
+    max-width: 1480px; /* Matching your main container width */
+    margin: 0 auto;
+    padding: 2rem 40px; /* Matching your header padding */
+}
+
+/* ========================================================== */
+/* Main Careers Page (Job Listings) */
+/* ========================================================== */
+
+/* Search and Filter Bar */
+.search-and-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Increased gap for better spacing */
+    padding: 1.5rem 2rem; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+.search-and-filter-bar input,
+.search-and-filter-bar select {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    flex: 1;
+    min-width: 180px;
+    font-family: 'Fedra', Arial, sans-serif;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.search-and-filter-bar input:focus,
+.search-and-filter-bar select:focus {
+    outline: none;
+    border-color: #1dbaf9;
+    box-shadow: 0 0 0 2px rgba(29, 186, 249, 0.2);
+}
+
+.search-and-filter-bar button {
+    padding: 0.8rem 2.5rem;
+    background-color: #000; /* Black background like your logo */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Fedra', Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.search-and-filter-bar button:hover {
+    background-color: #1dbaf9; /* Your brand color on hover */
+}
+
+/* Job Category Headings */
+.job-category-section h2 {
+    font-size: 2rem;
+    font-weight: 300; /* Lighter font weight */
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Job Listing Items */
+.job-listing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e9eaec; /* Light border */
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing-item:first-of-type {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.job-listing-item:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: none;
+}
+
+.job-listing-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    background-color: #fcfcfc;
+}
+
+.job-listing-item .job-info h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.job-listing-item .job-info p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.job-listing-item .arrow-icon {
+    font-size: 2rem;
+    color: #ccc;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.job-listing-item:hover .arrow-icon {
+    color: #000;
+}
+
+/* ========================================================== */
+/* Job Details Page & Application Form */
+/* ========================================================== */
+
+.job-details-page-content,
+.application-form-content {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1dbaf9;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0c82a5;
+}
+
+.job-details-page-content h1,
+.application-form-content h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.job-meta {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.job-section {
+    margin-bottom: 2rem;
+}
+
+.job-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.job-section p, .job-section ul {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1rem;
+}
+
+.job-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #1dbaf9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0c82a5;
+    transform: translateY(-2px);
+}
+
+/* Application Form Styles */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Fedra', Arial, sans-serif;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1dbaf9;
+    box-shadow: 0 0 0 2px rgba(29, 186, 249, 0.2);
+}
+
+.document-upload {
+    display: flex;
+    gap: 20px;
+}
+
+.upload-box {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.upload-box:hover {
+    background-color: #f0f0f0;
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-box span {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-box p {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Drag-over state for drag-and-drop */
+.upload-box.drag-over {
+    background-color: #e6f7ff;
+    border-color: #1dbaf9;
+}
+
+/* Uploaded state */
+.upload-box.uploaded {
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+/* Change text color when uploaded */
+.uploaded span,
+.uploaded p {
+    color: #000;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.form-actions button {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Fedra', Arial, sans-serif;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #1dbaf9;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #0c82a5;
+}
+
+.form-actions button[type="button"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #f7f7f7;
+}
+
+/* ========================================================== */
+/* Mobile Responsiveness */
+/* ========================================================== */
+
+@media (max-width: 768px) {
+    .careers-page-content,
+    .job-details-page-content,
+    .application-form-content {
+        padding: 1.5rem;
+    }
+
+    .search-and-filter-bar {
+        flex-direction: column;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    }
+
+    .search-and-filter-bar input,
+    .search-and-filter-bar select,
+    .search-and-filter-bar button {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .job-listing-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .job-listing-item .job-info {
+        margin-bottom: 10px;
+    }
+
+    .job-listing-item .arrow-icon {
+        align-self: flex-end;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
